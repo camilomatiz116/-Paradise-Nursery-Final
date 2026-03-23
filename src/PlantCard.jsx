@@ -24,7 +24,7 @@ const PlantCard = ({ plant, isAdded, onAddToCart }) => {
                     disabled={isAdded} 
                     onClick={() => onAddToCart(plant)}
                 >
-                    {isAdded ? 'Added' : 'Add to Cart'}
+                    {isAdded ? 'Added to Cart' : 'Add to Cart'}
                 </button>
             </div>
         </div>
