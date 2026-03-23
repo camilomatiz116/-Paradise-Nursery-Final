@@ -57,10 +57,13 @@ function ProductList({ onHomeClick }) {
         <div className="product-list-page">
             {/* Global Navigation Bar */}
             <nav className="navbar">
-                <div className="navbar-logo" onClick={onHomeClick}>Paradise Nursery</div>
+                <div className="navbar-logo" onClick={onHomeClick}>
+                    <span className="logo-icon">🌿</span>
+                    Paradise Nursery
+                </div>
                 <div className="navbar-links">
-                    <a href="#" onClick={onHomeClick}>Home</a>
-                    <a href="#" onClick={() => setShowCart(false)}>Plants</a>
+                    <a href="#" className="nav-item" onClick={onHomeClick}>Home</a>
+                    <a href="#" className="nav-item active" onClick={() => setShowCart(false)}>Plants</a>
                     <a href="#" onClick={handleCartClick} className="cart-nav-link">
                         <span className="cart-icon">🛒</span>
                         <span className="cart-amount">{totalCartItems}</span>
