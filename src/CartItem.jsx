@@ -64,9 +64,14 @@ const CartItem = ({ onContinueShopping }) => {
   return (
     <div className="cart-container">
       <div className="cart-header">
-        <h2>Shopping Cart</h2>
-        <div className="total-amount-summary">
-          Total Cart Amount: <span>${totalAmount}</span>
+        <h2>Shopping Cart Summary</h2>
+        <div className="cart-summary-group">
+          <div className="total-items-summary">
+            Total Items: <span>{cart.reduce((sum, item) => sum + item.quantity, 0)}</span>
+          </div>
+          <div className="total-amount-summary">
+            Total Cost: <span>${totalAmount}</span>
+          </div>
         </div>
       </div>
       
@@ -102,7 +107,7 @@ const CartItem = ({ onContinueShopping }) => {
                 </div>
 
                 <button className="remove-item-btn" onClick={() => handleRemove(item)}>
-                  Remove from Cart
+                  Delete
                 </button>
               </div>
             </div>
